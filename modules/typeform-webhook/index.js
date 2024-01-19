@@ -3,7 +3,9 @@ import Navigator from "./Navigator";
 import { slice } from "./store";
 
 const TypeformWebhooks = () => {
-  return <Navigator />;
+  return (
+    <Navigator/>
+  );
 };
 
 export default {
