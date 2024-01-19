@@ -1,16 +1,34 @@
 import React, { useState } from "react";
-import { Text, View, StyleSheet, ImageBackground, TextInput } from "react-native";
+import {
+  Text,
+  View,
+  StyleSheet,
+  ImageBackground,
+  TextInput
+} from "react-native";
 
 const AddPhoneNumber = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
-  return <ImageBackground source={require("./assets/foodWatermark.png")} resizeMode="center" style={styles.container}>
+  return (
+    <ImageBackground
+      source={require("./assets/foodWatermark.png")}
+      resizeMode="center"
+      style={styles.container}>
       <View style={styles.inputContainer}>
         <Text style={styles.inputText}>Enter Phone Number</Text>
-        <TextInput style={styles.input} onChangeText={text => setPhoneNumber(text)} value={phoneNumber} placeholder="Enter Phone Number" placeholderTextColor="#9B9B9B" autoCapitalize="none" autoCorrect={false} />
+        <TextInput
+          style={styles.input}
+          onChangeText={text => setPhoneNumber(text)}
+          value={phoneNumber}
+          placeholder="Enter Phone Number"
+          placeholderTextColor="#9B9B9B"
+          autoCapitalize="none"
+          autoCorrect={false}
+        />
       </View>
-    </ImageBackground>;
+    </ImageBackground>
+  );
 };
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -38,4 +56,5 @@ const styles = StyleSheet.create({
     height: 50
   }
 });
+
 export default AddPhoneNumber;
