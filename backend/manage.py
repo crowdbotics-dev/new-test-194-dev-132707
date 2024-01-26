@@ -5,9 +5,7 @@ import sys
 
 
 def main():
-    os.environ.setdefault(
-        "DJANGO_SETTINGS_MODULE", "new_test_194_dev_132707.settings"
-    )
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "new_test_194_dev_132707.settings")
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
