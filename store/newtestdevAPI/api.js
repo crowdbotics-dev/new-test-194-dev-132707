@@ -32,6 +32,24 @@ function api_v1_t1_partial_update(payload) {
 function api_v1_t1_destroy(payload) {
   return newtestdevAPI.delete(`/api/v1/t1/${payload.id}/`)
 }
+function api_v1_t2_list(payload) {
+  return newtestdevAPI.get(`/api/v1/t2/`)
+}
+function api_v1_t2_create(payload) {
+  return newtestdevAPI.post(`/api/v1/t2/`, payload)
+}
+function api_v1_t2_retrieve(payload) {
+  return newtestdevAPI.get(`/api/v1/t2/${payload.id}/`)
+}
+function api_v1_t2_update(payload) {
+  return newtestdevAPI.put(`/api/v1/t2/${payload.id}/`, payload)
+}
+function api_v1_t2_partial_update(payload) {
+  return newtestdevAPI.patch(`/api/v1/t2/${payload.id}/`, payload)
+}
+function api_v1_t2_destroy(payload) {
+  return newtestdevAPI.delete(`/api/v1/t2/${payload.id}/`)
+}
 function rest_auth_login_create(payload) {
   return newtestdevAPI.post(`/rest-auth/login/`, payload)
 }
@@ -75,6 +93,12 @@ export const apiService = {
   api_v1_t1_update,
   api_v1_t1_partial_update,
   api_v1_t1_destroy,
+  api_v1_t2_list,
+  api_v1_t2_create,
+  api_v1_t2_retrieve,
+  api_v1_t2_update,
+  api_v1_t2_partial_update,
+  api_v1_t2_destroy,
   rest_auth_login_create,
   rest_auth_logout_create,
   rest_auth_password_change_create,
