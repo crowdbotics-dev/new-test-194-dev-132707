@@ -10,3 +10,7 @@ class T1(models.Model):
 class T2(models.Model):
     "Generated Model"
     t2 = models.BigIntegerField()
+    t3 = models.BigIntegerField(
+        null=True,
+        blank=True,
+    )
