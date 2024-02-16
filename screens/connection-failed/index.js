@@ -2,8 +2,7 @@ import React from "react";
 import { Text, View, StyleSheet, Image, Pressable } from "react-native";
 
 const ConnectionFailed = () => {
-  return (
-    <View style={styles.container}>
+  return <View style={styles.container}>
       <Text style={styles.heading}>Connection Failed</Text>
       <Text style={styles.subText}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque.
@@ -18,9 +17,9 @@ const ConnectionFailed = () => {
           <Text style={styles.green}>Settings</Text>
         </Text>
       </Text>
-    </View>
-  );
+    </View>;
 };
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -55,7 +54,6 @@ const styles = StyleSheet.create({
     color: "#12D790"
   }
 });
-
 export default ConnectionFailed;
 
 const Button = params => {
@@ -67,14 +65,12 @@ const Button = params => {
   const btnText = {
     color: params.outline ? "#000" : "#fff"
   };
-  return (
-    <View style={buttonStyles.btnContainer}>
+  return <View style={buttonStyles.btnContainer}>
       <Pressable style={[buttonStyles.btn, btnStyle]} onPress={params.onPress}>
         <Text style={[buttonStyles.btnText, btnText]}>{params.buttonText}</Text>
         <View style={styles.childrenContainer}>{params.children}</View>
       </Pressable>
-    </View>
-  );
+    </View>;
 };
 
 const buttonStyles = StyleSheet.create({
